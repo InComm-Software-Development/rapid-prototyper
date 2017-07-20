@@ -5,6 +5,7 @@
 
 #### Set ####
 - Clone this repo
+- Create .env file with Twilio credentials see example https://www.npmjs.com/package/dotenv
 
 #### Go ####
 - Run `npm start` from your shell to start the server
