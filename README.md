@@ -11,4 +11,10 @@
 - In a new shell window, run `npm run launch` to launch the site
 
 #### TODO ####
-- Serve static assets (css?)
+- Tools: Node, JavaScript, HTML, CSS 
+- Setup
+- How to clone
+- Code layout/file structure (package.json)
+- Style page using css
+- Remove unwanted messages
+- Refactor and clean up visual messages
