@@ -6,8 +6,8 @@ require('dotenv').config()
 const app = express()
 const port = 3000
 
-const ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID
-const AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN
+const ACCOUNT_SID = 'ACe66fe0391cb57ba6d05e8abfb9c25975'
+const AUTH_TOKEN = 'cf25c41475f1273ae90afd1a7a39d826'
 const client = new Twilio(ACCOUNT_SID, AUTH_TOKEN)
 
 // App config
@@ -20,8 +20,13 @@ app.use(express.static('assets'))
 // Top level route
 app.get('/', async (request, response) => {
   const twilioMessages = await client.messages.list()
-  console.log(twilioMessages);
-  const messageBodies = twilioMessages.map(fullMessage => fullMessage.body)
+  const messageBodies = twilioMessages.filter(
+    fullMessage => fullMessage.body.includes('Artist'))
+    .map(fullMessage => {return {
+      body: fullMessage.body, 
+      to: fullMessage.to, 
+      from: fullMessage.from
+  }});
   response.render('view', {messages: messageBodies})
 })
 
