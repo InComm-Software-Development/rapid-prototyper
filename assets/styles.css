@@ -3,7 +3,10 @@ body {
   text-align: center;
   font-family: 'Zilla Slab', serif;
   font-size: 35px;
-  al
+ background-color: #8A2BE2;
+ padding: 0px;
+ margin: 0px;
+
 }
 
 ul {
@@ -12,11 +15,16 @@ ul {
   padding-bottom: 10;
 }
 
-div#main-content {
+main{
   width: 50%;
   margin: 0 auto;
 }
-
-div#phone-number {
+header#phone-number {
   font-size: 100px;
+  background-color: 	#E6E6FA;
+  padding: 20px 0;
+}
+header#phone-number span {
+  max-width: 1000px;
+
 }
