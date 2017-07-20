@@ -6,8 +6,8 @@ require('dotenv').config()
 const app = express()
 const port = 3000
 
-const ACCOUNT_SID = 'AC623bc71d4f94223602f23580f5f3e2c3'
-const AUTH_TOKEN = '1178a4bc9924c486f57f2a553c425a42'
+const ACCOUNT_SID = process.env.TWILIO_ACCOUNT_SID
+const AUTH_TOKEN = process.env.TWILIO_AUTH_TOKEN
 const client = new Twilio(ACCOUNT_SID, AUTH_TOKEN)
 
 // App config
