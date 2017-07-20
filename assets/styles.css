@@ -3,20 +3,29 @@ body {
   text-align: center;
   font-family: 'Zilla Slab', serif;
   font-size: 35px;
-  al
+  background-color: #d1f20a;
+  padding: 0px;
+  margin: 0px;
 }
 
 ul {
   list-style-type: none;
-  margin: 0;
-  padding-bottom: 10;
-}
-
-div#main-content {
-  width: 50%;
   margin: 0 auto;
+  padding: 20px 0 10px 0;
+  max-width: 1000px;
 }
 
-div#phone-number {
+main {
+  margin: 0 auto;
+
+}
+
+header#phone-number {
   font-size: 100px;
+  background-color: #fe447d;
+  padding: 20px 0px;
+}
+
+header#phone-number span {
+  max-width: 1000px;
 }
